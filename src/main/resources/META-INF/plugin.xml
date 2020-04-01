@@ -1,0 +1,13 @@
+<idea-plugin>
+    <id>io.github.juliabeliaeva.status-clock</id>
+    <name>Status Clock</name>
+    <vendor email="juliabeliaeva@users.noreply.github.com" url="http://juliabeliaeva.github.io"/>
+
+    <description>Displays simple clock in the IDE status bar</description>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory implementation="io.github.juliabeliaeva.statusClock.ClockStatusBarWidgetFactory"
+                                order="after notificationsWidget"/>
+    </extensions>
+</idea-plugin>
