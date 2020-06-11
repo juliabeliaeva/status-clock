@@ -9,6 +9,7 @@ import com.intellij.openapi.wm.StatusBarWidget
 import com.intellij.openapi.wm.StatusBarWidgetFactory
 import com.intellij.util.Consumer
 import com.intellij.util.concurrency.AppExecutorUtil
+import com.intellij.util.text.DateFormatUtil
 import com.intellij.util.text.JBDateFormat
 import java.awt.Component
 import java.awt.event.MouseEvent
@@ -29,7 +30,7 @@ class ClockStatusWidget : StatusBarWidget, StatusBarWidget.TextPresentation {
     override fun ID(): String = ID
     override fun getPresentation(): StatusBarWidget.WidgetPresentation? = this
     override fun getTooltipText(): String? = JBDateFormat.getFormatter().formatDateTime(System.currentTimeMillis())
-    override fun getText(): String = JBDateFormat.getFormatter().formatTime(System.currentTimeMillis())
+    override fun getText(): String = DateFormatUtil.formatTime(System.currentTimeMillis())
     override fun getClickConsumer(): Consumer<MouseEvent>? = null
     override fun getAlignment(): Float = Component.CENTER_ALIGNMENT
 
