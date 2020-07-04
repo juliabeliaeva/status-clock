@@ -1,5 +1,6 @@
 package io.github.juliabeliaeva.statusClock
 
+import com.intellij.ide.lightEdit.LightEditCompatible
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
@@ -43,7 +44,7 @@ class ClockStatusWidget : StatusBarWidget, StatusBarWidget.TextPresentation {
     }
 }
 
-class ClockStatusBarWidgetFactory : StatusBarWidgetFactory {
+class ClockStatusBarWidgetFactory : StatusBarWidgetFactory, LightEditCompatible {
     override fun getId(): String = ID
     override fun getDisplayName(): String = "Status Bar Clock"
     override fun isAvailable(project: Project): Boolean = true
