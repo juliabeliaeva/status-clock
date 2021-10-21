@@ -33,8 +33,8 @@ intellij {
     version 'LATEST-EAP-SNAPSHOT'
 }
 patchPluginXml {
-    sinceBuild '203.*'
-    untilBuild '212.*'
+    sinceBuild = '203.*'
+    untilBuild = '212.*'
 }
 
 compileKotlin {
